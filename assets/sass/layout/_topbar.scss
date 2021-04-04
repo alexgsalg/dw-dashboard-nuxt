@@ -1,0 +1,48 @@
+.topBar {
+  @include dflex(space-between, center);
+  padding: 1rem 2rem 1rem 2.2rem;
+  background-color: $white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+  border-radius: 8px;
+
+  &_icons,
+  &_admin,
+  .admin-icons,
+  .admin_user {
+    @include dflex(flex-start, center);
+  }
+
+  &_icons__item,
+  .admin-icons__item {
+    @include dflex(center, center);
+    padding: 0.7rem;
+    margin-right: 0.7rem;
+
+    img {
+      transition: all ease-in-out 250ms;
+    }
+
+    &:hover {
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .admin_user {
+    padding-left: 14px;
+    text-align: right;
+
+    &__name {
+      @include fontStyle(1.4rem, 1.8rem, $text_dark, 400);
+    }
+
+    &__group {
+      @include fontStyle(1.1rem, 1.3rem, 300, $text_dark);
+    }
+
+    &__avatar img {
+      margin: -5px 0 -5px 0;
+    }
+  }
+}

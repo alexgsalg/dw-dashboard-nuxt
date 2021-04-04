@@ -1,0 +1,61 @@
+<template>
+  <svg
+    class="rating_star"
+    width="128"
+    height="19"
+    viewBox="0 0 128 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M10 0.5L12.781 6.09516L19 6.9979L14.5 11.3507L15.562 17.5L10 14.5952L4.438 17.5L5.5 11.3507L1 6.9979L7.219 6.09516L10 0.5Z"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M37 0.5L39.781 6.09516L46 6.9979L41.5 11.3507L42.562 17.5L37 14.5952L31.438 17.5L32.5 11.3507L28 6.9979L34.219 6.09516L37 0.5Z"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M64 0.5L66.781 6.09516L73 6.9979L68.5 11.3507L69.562 17.5L64 14.5952L58.438 17.5L59.5 11.3507L55 6.9979L61.219 6.09516L64 0.5Z"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M91 0.5L93.781 6.09516L100 6.9979L95.5 11.3507L96.562 17.5L91 14.5952L85.438 17.5L86.5 11.3507L82 6.9979L88.219 6.09516L91 0.5Z"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      class="noFill"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M118 0.5L120.781 6.09516L127 6.9979L122.5 11.3507L123.562 17.5L118 14.5952L112.438 17.5L113.5 11.3507L109 6.9979L115.219 6.09516L118 0.5V0.5Z"
+      fill="none"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>
+
+<script>
+export default {
+  name: "FourStarIcon",
+};
+</script>
+
+<style></style>

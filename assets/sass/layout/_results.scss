@@ -1,0 +1,327 @@
+.results {
+  &_header {
+    @include dflex(space-between, flex-end);
+    margin-bottom: 2.2rem;
+  }
+
+  &__title {
+    @include fontStyle(1.8rem, 2rem, $text_dark);
+  }
+
+  &_filter {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    margin-top: 2rem;
+  }
+
+  .filter_box {
+    @include card;
+    padding: 2.5rem;
+
+    &__title {
+      @include fontStyle(1.8rem, 2.2rem, $text_dark, 600);
+      padding-bottom: 2.1rem;
+    }
+
+    &__item {
+      margin-bottom: 3.3rem;
+      padding: 0 0.8rem 2rem;
+      border-bottom: 1px solid $element_lighterGray;
+
+      &.last {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      &top {
+        @include dflex(space-between, center);
+      }
+    }
+
+    &__btn {
+      padding: 2rem 0.5rem 4rem;
+      button {
+        // max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+//RANGE
+//Fundo
+.slider-base {
+  background: $bg_darkWhite !important;
+}
+//Bullets
+.slider-handle {
+  background: $element_darkGray !important;
+}
+//Range
+.slider-connect {
+  background: $element_darkGray !important;
+}
+
+//ORGANIZAÇÂO
+.results_list {
+  flex: 3;
+}
+.results_search {
+  .results_header {
+    @include dflex(space-between, flex-end);
+
+    .filter_close {
+      display: none;
+    }
+  }
+}
+
+.results_organize {
+  @include dflex(flex-end, center);
+  gap: 1.3rem;
+
+  select,
+  .organize_btn {
+    @include card;
+    height: 4rem;
+    border: none;
+    padding: 1.2rem;
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      background-color: $background;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .organize_filterMobile {
+    //Atributo a ser inplementado no mobile
+    // @include dflex(center, center);
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background-color: $bg_darkerWhite;
+    color: $text_dark;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  select {
+    position: relative;
+    width: 14rem;
+    padding-right: 2.2rem;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-down' class='svg-inline--fa fa-chevron-down fa-w-14' role='img' viewBox='0 0 448 512'><path fill='606060' d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    @include fontStyle(1.4rem, 1.7rem, $text_dark);
+  }
+}
+
+.searchbox {
+  @include dflex(space-between, center);
+  width: 100%;
+  height: 5.2rem;
+  margin-bottom: 2.7rem;
+  padding: 2.5rem;
+  @include card;
+
+  #search {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    @include fontStyle(2.2rem, 2.6rem, $text_lightGray, 300);
+
+    &::placeholder {
+      @include fontStyle(2.2rem, 2.6rem, $text_lightGray, 300);
+    }
+  }
+  button {
+    border: none;
+    background: none;
+    outline: none;
+  }
+}
+
+.results_cards {
+  @include dflex(space-between, flex-start);
+  flex-wrap: wrap;
+  opacity: 1;
+  transition: all ease-in-out 100ms;
+
+  &.blinkIn {
+    opacity: 0;
+    transition: all ease-in-out 100ms;
+  }
+}
+
+.card_item {
+  width: 100%;
+  @include card;
+  @include dflex(flex-start, stretch);
+  margin-bottom: 2.7rem;
+  transition: all ease-in-out 100ms;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    display: block;
+    width: 10%;
+    max-width: 213px;
+    min-width: 180px;
+    margin: 2rem 1rem;
+    transition: all ease-in-out 100ms;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: 3rem 5rem 3rem 1.3rem;
+    border-right: 1px solid $element_lighterGray;
+    transition: all ease-out 150ms;
+
+    a:hover {
+      color: $primary;
+    }
+  }
+
+  &__info {
+    @include dflex(space-between, stretch);
+    flex-direction: column;
+    width: 100%;
+    max-width: 220px;
+    padding: 2rem;
+    transition: all ease-in-out 100ms;
+
+    & > div {
+      width: 100%;
+      text-align: right;
+    }
+
+    .btn {
+      transition: all ease-out 150ms;
+      &:first-child {
+        margin-bottom: 1.1rem;
+      }
+      img,
+      i {
+        margin-right: 1rem;
+      }
+      img {
+        width: 16px;
+        height: 18px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  &__rating {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    background-color: $bg_lighterGray;
+    border-radius: 3px;
+    @include fontStyle(1.4rem, 1.7rem, $white);
+    color: $white;
+    pointer-events: none;
+    margin-bottom: 1rem;
+  }
+
+  &__price {
+    text-align: center;
+    @include fontStyle(1.8rem, 2.1rem, $text_dark);
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    transition: all ease-out 150ms;
+  }
+  &__title {
+    display: inline-block;
+    @include fontStyle(1.6rem, 1.9rem, $text_dark);
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+  }
+
+  &__by {
+    @include fontStyle(1.2rem, 1.4rem, $text_gray);
+    font-weight: 700;
+    margin-bottom: 2.2rem;
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__text {
+    @include fontStyle(1.4rem, 2.3rem, $text_gray, 300);
+    max-width: 620px;
+  }
+
+  // Mudando para Card
+  &.toCard {
+    width: 48%;
+    flex-wrap: wrap;
+    transition: all ease-out 150ms;
+
+    .card_item__img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      overflow: hidden;
+      transition: all ease-in 150ms;
+
+      img {
+        height: 200px;
+        transition: all ease-in 150ms;
+      }
+    }
+    .card_item__content {
+      width: 100%;
+      padding: 3rem;
+      border-right: none;
+      border-bottom: 1px solid $element_lighterGray;
+      transition: all ease-in 150ms;
+    }
+    .card_item__info {
+      width: 100%;
+      max-width: 100%;
+      transition: all ease-in 150ms;
+      & > div {
+        @include dflex(space-between, center);
+        text-align: unset;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn_medium {
+        width: 47%;
+        margin-bottom: 0 !important;
+        height: 5rem;
+        transition: all ease-in 150ms;
+      }
+    }
+    .card_item__price {
+      font-size: 2.5rem;
+      transition: all ease-in 150ms;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@mixin fontStyle($size, $line, $color, $weight: 400) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin dflex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin card {
+  background-color: $white;
+  box-shadow: 0px 2px 8px rgba($black, 0.135216);
+  border-radius: 8px;
+}

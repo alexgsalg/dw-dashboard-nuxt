@@ -1,0 +1,27 @@
+#valorRange {
+  width: 100%;
+  padding: 0 1rem;
+
+  .slider-horizontal {
+    width: 100%;
+  }
+
+  .tooltip-main {
+    display: none;
+  }
+
+  .slider-handle {
+    background-color: $secondary !important;
+  }
+
+  .slider-selection {
+    background-color: $primary !important;
+    box-shadow: none;
+    background-image: none;
+  }
+
+  .slider-track-low,
+  .slider-track-high {
+    background-color: rgba($primary, 0.15) !important;
+  }
+}

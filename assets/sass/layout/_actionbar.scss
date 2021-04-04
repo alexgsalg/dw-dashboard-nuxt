@@ -1,0 +1,46 @@
+.actionBar {
+  @include dflex(flex-start, center);
+  margin: 2.5rem 0;
+
+  &__title {
+    @include fontStyle(2.4rem, 3rem, $text_dark);
+    padding-right: 4.3rem;
+    margin-right: 1.1rem;
+    border-right: 1px solid $element_gray;
+  }
+
+  &__breadcrumbs {
+    @include dflex(flex-start, center);
+    gap: 1.1rem;
+    flex: 1;
+
+    .breadcrumb_tohome {
+      padding: 0.3rem;
+      svg path {
+        stroke: $element_darkGray;
+        transition: all ease-in-out 250ms;
+      }
+      &:hover svg path {
+        stroke: $primary;
+      }
+    }
+
+    p {
+      @include fontStyle(1.4rem, 1.7rem, $black);
+    }
+  }
+
+  &__config {
+    @include dflex(center, center);
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background-color: $bg_lighterGray;
+    border-radius: 50%;
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}

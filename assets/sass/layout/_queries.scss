@@ -1,0 +1,277 @@
+// Tablet acima
+@media screen and (min-width: 780px) {
+  .section_mobile {
+    display: none;
+  }
+  .filter_close {
+    display: none;
+  }
+}
+
+//
+@media screen and (max-width: 779px) {
+  #app > main {
+    padding: 9rem 2.5rem 4.5rem;
+  }
+
+  #app > header {
+    position: fixed;
+    height: 100vh;
+    z-index: 999;
+    left: -200px;
+    transition: all ease-in-out 250ms;
+
+    &.open {
+      left: 0;
+    }
+  }
+
+  .section_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1rem 1rem 2rem;
+    @include dflex(space-between, center);
+    background-color: $white;
+    box-shadow: 0 3px 7px 3px rgb(0, 0, 0, 0.1);
+
+    .mobile_logo {
+      width: 160px;
+      padding: 0rem 4rem 0.5rem 0.4rem;
+    }
+    #menu {
+      display: inline-block;
+      padding: 1rem;
+      background: transparent;
+      font-size: 2.3rem;
+      color: $text_dark;
+      border: none;
+      outline: none;
+    }
+  }
+  .header_logo {
+    opacity: 0;
+  }
+  //Conteúdo central
+  .results {
+    &_filter {
+      flex: 1;
+    }
+    .filter_box {
+      padding: 1.5rem;
+
+      &__btn {
+        padding: 2rem 0.5rem 4rem;
+        .btn {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &_list {
+      flex: 2;
+    }
+  }
+
+  //ORGANIZADORES
+  .organize_btn {
+    display: none;
+  }
+  //CARD
+  .card_item {
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    transition: all ease-out 150ms;
+
+    &__img {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      overflow: hidden;
+      transition: all ease-in 150ms;
+
+      img {
+        height: 140px;
+        transition: all ease-in 150ms;
+      }
+    }
+    &__content {
+      width: 100%;
+      padding: 3rem;
+      border-right: none;
+      border-bottom: 1px solid $element_lighterGray;
+      transition: all ease-in 150ms;
+    }
+    &__info {
+      width: 100%;
+      max-width: 100%;
+      flex-direction: row;
+      transition: all ease-in 150ms;
+      & > div {
+        @include dflex(space-between, center);
+        text-align: unset;
+        margin-bottom: 1.5rem;
+
+        &:first-child {
+          @include dflex(flex-start, center);
+          width: 42%;
+        }
+      }
+
+      .btn_medium {
+        width: 48%;
+        height: 5rem;
+        margin-bottom: 0 !important;
+        font-size: 1.3rem;
+        transition: all ease-in 150ms;
+      }
+    }
+    &__rating {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      padding: 0.7rem 1rem;
+      background-color: $bg_lighterGray;
+      border-radius: 3px;
+      @include fontStyle(1.4rem, 1.7rem, $white);
+      color: $white;
+      pointer-events: none;
+      margin-bottom: 1rem;
+    }
+    &__price {
+      margin-bottom: 0;
+      font-size: 2.5rem;
+      font-weight: 600;
+      transition: all ease-in 150ms;
+    }
+  }
+  .filter_box__itemtop {
+    flex-wrap: wrap;
+    .filter_box__title:last-child {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main_wrapper {
+    margin-bottom: 4rem;
+  }
+  //TOPBAR
+  .topBar {
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 0;
+
+    &_icons {
+      width: 100%;
+      padding: 1rem 2rem 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+      &__item {
+        padding: 1rem;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    &_admin {
+      width: 100%;
+      justify-content: space-between;
+      padding: 1.5rem 2rem 1rem;
+      border-bottom: 1px solid $element_lighterGray;
+    }
+  }
+
+  // ACTIONBAR
+  .actionBar {
+    flex-wrap: wrap;
+    &__title,
+    &__breadcrumbs {
+      width: 86%;
+      border: none;
+      flex: unset;
+    }
+    &__config {
+      position: relative;
+      margin-top: -30px;
+    }
+  }
+
+  //FILTER RESULTS
+  .results_filter {
+    display: none;
+    transition: all ease-in-out 250ms;
+
+    &.open {
+      position: fixed;
+      display: block;
+      overflow: auto;
+      top: 5rem;
+      left: 0;
+      width: 100%;
+      max-width: unset;
+      height: 100vh;
+      padding: 3rem 3rem 5rem;
+      z-index: 999;
+      background-color: $white;
+    }
+    .filter_close {
+      position: absolute;
+      display: block;
+      top: 3rem;
+      right: 3rem;
+      font-size: 2.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .results {
+    .filter_box {
+      box-shadow: none;
+    }
+  }
+  .results_organize {
+    .organize_filterMobile {
+      @include dflex(center, center);
+    }
+  }
+
+  .card_item {
+    &__info {
+      flex-direction: column;
+
+      & > div {
+        width: 100% !important;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child {
+          justify-content: space-between;
+          flex-direction: row-reverse;
+        }
+      }
+      .btn_medium {
+        width: 48%;
+      }
+    }
+    &__rating {
+      position: unset;
+    }
+  }
+
+  .pagination {
+    &_numbers {
+      .pagination__item {
+        display: none;
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}

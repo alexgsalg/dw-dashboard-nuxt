@@ -1,0 +1,39 @@
+.pagination {
+  @include dflex(center, center);
+  margin-top: 8rem;
+
+  &_numbers {
+    @include dflex(center, center);
+    margin: 0 1.7rem;
+    border-radius: 50px;
+    background-color: $bg_darkWhite;
+  }
+
+  &_arrow,
+  &__item {
+    @include dflex(center, center);
+    width: 40px;
+    height: 40px;
+    background-color: $bg_darkWhite;
+    @include fontStyle(1.8rem, 2rem, $text_dark);
+    border-radius: 50px;
+    transition: all ease-in-out 250ms;
+
+    &:hover {
+      background-color: $bg_lighterGray;
+      color: $white;
+      border-radius: 50px;
+    }
+  }
+
+  &__item {
+    border-radius: 50px;
+
+    &.active {
+      position: relative;
+      background-color: $bg_darkGray;
+      @include fontStyle(1.8rem, 2rem, $white);
+      border-radius: 50px;
+    }
+  }
+}
