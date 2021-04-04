@@ -35,7 +35,8 @@
 
 /* When the radio button is checked, add a blue background */
 .radio input:checked ~ .checkround {
-  background-color: $element_gray;
+  background-color: $primary;
+  border-color: $primary;
 }
 
 //CHECKBOX
@@ -78,11 +79,12 @@
 /* When the checkbox is checked, add a blue background */
 .check input:checked ~ .checkmark {
   background-color: #fff;
+  border-color: $primary;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -90,6 +92,7 @@
 /* Show the checkmark when checked */
 .check input:checked ~ .checkmark:after {
   display: block;
+  border-color: $primary;
 }
 
 /* Style the checkmark/indicator */

@@ -42,7 +42,6 @@
     &__btn {
       padding: 2rem 0.5rem 4rem;
       button {
-        // max-width: 400px;
         margin: 0 auto;
       }
     }
@@ -132,6 +131,7 @@
   }
 }
 
+//Searchbox
 .searchbox {
   @include dflex(space-between, center);
   width: 100%;
@@ -144,7 +144,7 @@
     flex: 1;
     border: none;
     outline: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     @include fontStyle(2.2rem, 2.6rem, $text_lightGray, 300);
 
     &::placeholder {
@@ -158,6 +158,7 @@
   }
 }
 
+//CARDS CURSOS
 .results_cards {
   @include dflex(space-between, flex-start);
   flex-wrap: wrap;
@@ -175,6 +176,7 @@
   @include card;
   @include dflex(flex-start, stretch);
   margin-bottom: 2.7rem;
+  overflow: hidden;
   transition: all ease-in-out 100ms;
 
   &:last-child {
@@ -183,10 +185,10 @@
 
   &__img {
     display: block;
-    width: 10%;
-    max-width: 213px;
-    min-width: 180px;
-    margin: 2rem 1rem;
+    width: 15%;
+    /* max-width: 300px; */
+    min-width: 230px;
+    margin-right: 2rem;
     transition: all ease-in-out 100ms;
 
     img {

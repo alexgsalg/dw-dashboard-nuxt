@@ -40,7 +40,7 @@
               <div class="filter_box__itemtop">
                 <p class="filter_box__title">Valores</p>
                 <p class="filter_box__title">
-                  {{ sliderRange.value[0] }} - {{ sliderRange.value[1] }}
+                  R${{ sliderRange.value[0] }} - R${{ sliderRange.value[1] }}
                 </p>
               </div>
               <b-form-slider
@@ -49,7 +49,6 @@
                 :value="sliderRange.value"
                 :min="sliderRange.min"
                 :max="sliderRange.max"
-                @slide-start="slideStart"
               ></b-form-slider>
             </div>
 
@@ -246,7 +245,7 @@ export default {
     priceSelected: 'all',
     check: [
       {
-        text: 'Métodos',
+        text: 'Metodologias',
         value: 'metodos',
         ischecked: false,
         counter: 1920,
@@ -264,16 +263,10 @@ export default {
         counter: 462,
       },
       {
-        text: 'Video making',
+        text: 'Audiovisual',
         value: 'video',
         ischecked: false,
         counter: 6556,
-      },
-      {
-        text: 'Audio making',
-        value: 'audios',
-        ischecked: false,
-        counter: 120,
       },
     ],
     rating: [
@@ -296,31 +289,31 @@ export default {
       {
         id: 0,
         link: '#',
-        image: require('../assets/img/image-placeholder.jpg'),
-        title: 'Formula de Lançamento',
-        by: 'Érico Rocha',
-        price: '2500',
-        rating: '3.4',
+        image: require('../assets/img/metodoAgil.jpg'),
+        title: 'Formula ágil',
+        by: 'Leo Cordeiro',
+        price: '500',
+        rating: '4.3',
         content:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book.",
       },
       {
         id: 1,
         link: '#',
-        image: require('../assets/img/image-placeholder.jpg'),
-        title: 'Formula de Lançamento',
-        by: 'Érico Rocha',
-        price: '2500',
-        rating: '3.4',
+        image: require('../assets/img/flexGrid.png'),
+        title: 'Flexbox e CSSGrid',
+        by: 'Alex Salgado',
+        price: '2000',
+        rating: '4.9',
         content:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book.",
       },
       {
         id: 2,
         link: '#',
-        image: require('../assets/img/image-placeholder.jpg'),
-        title: 'Formula de Lançamento',
-        by: 'Érico Rocha',
+        image: require('../assets/img/responsive.jpg'),
+        title: 'Responsividade crossbrowser',
+        by: 'Sergio Moura',
         price: '2500',
         rating: '3.4',
         content:
@@ -329,9 +322,9 @@ export default {
       {
         id: 3,
         link: '#',
-        image: require('../assets/img/image-placeholder.jpg'),
-        title: 'Formula de Lançamento',
-        by: 'Érico Rocha',
+        image: require('../assets/img/audioMastering.jpg'),
+        title: 'Gravação e masterização',
+        by: 'Brasil Play',
         price: '2500',
         rating: '3.4',
         content:
@@ -343,15 +336,6 @@ export default {
     this.ifMobile()
   },
   methods: {
-    slideStart() {
-      const minValue = document.querySelector('.min-slider-handle')
-      // console.log(minValue.getAttribute('aria-valuenow'))
-      this.priceMin = minValue.getAttribute('aria-valuenow')
-      console.log(this.priceMin)
-    },
-    slideStop() {
-      console.log('slideStopped')
-    },
     changeToCard(event) {
       event.preventDefault()
       if (this.changeGrid === false) {
@@ -382,7 +366,7 @@ export default {
       })
       this.priceSelected = 'all'
       this.ratingSelected = ''
-      this.slider.value = [0, 5000]
+      this.sliderRange.value = [0, 1000]
       this.filterOpen = false
     },
     ifMobile() {

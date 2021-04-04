@@ -2,11 +2,11 @@
   display: inline-block;
   width: 100%;
   padding: 1.5rem 2rem;
-  background-color: $bg_darkGray;
+  background-color: $primary;
   outline: none;
   border: none;
   border-radius: 8px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   @include fontStyle(1.8rem, 2rem, $white);
   text-align: center;
   text-transform: uppercase;
@@ -14,7 +14,7 @@
   transition: all ease-in-out 250ms;
 
   &:hover {
-    background-color: $primary;
+    background-color: $secondary;
   }
   &_medium {
     font-size: 1.4rem;
