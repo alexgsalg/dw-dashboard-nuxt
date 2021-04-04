@@ -14,6 +14,7 @@
 
   &_icons__item,
   .admin-icons__item {
+    position: relative;
     @include dflex(center, center);
     padding: 0.7rem;
     margin-right: 0.7rem;

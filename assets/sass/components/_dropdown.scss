@@ -1,0 +1,27 @@
+.notification_dropdown {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 200px;
+  background-color: $white;
+  box-shadow: 0 3px 12px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  li {
+    @include dflex(space-between, flex-start);
+    padding: 1.2rem 0 1.2rem 1.2rem;
+    border-bottom: 1px solid $element_gray;
+    @include fontStyle(1.2rem, 1.6rem, $text_dark);
+
+    &:last-child {
+      border: none;
+    }
+    span {
+      @include dflex(center, center);
+      width: 25px;
+      height: 20px;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+}

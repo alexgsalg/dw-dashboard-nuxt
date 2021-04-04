@@ -6,6 +6,14 @@
       <p class="header_apps__title">APPS</p>
       <nav>
         <router-link
+          to="/"
+          class="header_apps__item"
+          exact-active-class="active"
+        >
+          <home-icon />
+          Home
+        </router-link>
+        <router-link
           to="/cursos"
           class="header_apps__item"
           exact-active-class="active"
@@ -27,10 +35,6 @@
           <todo-icon />
           Todos
         </a>
-        <a href="#" class="header_apps__item" exact-active-class="active">
-          <calendar-icon />
-          Calendário
-        </a>
       </nav>
     </div>
 
@@ -45,24 +49,24 @@
 </template>
 
 <script>
-  import BooksIcon from "../assets/icons/BooksIcon.vue";
-  import CalendarIcon from "../assets/icons/CalendarIcon.vue";
-  import EmailIcon from "../assets/icons/EmailIcon.vue";
-  import TodoIcon from "../assets/icons/TodoIcon.vue";
-  import Logo from "../assets/icons/Logo.vue";
-  export default {
-    name: "sidebar",
-    components: { EmailIcon, TodoIcon, CalendarIcon, BooksIcon, Logo },
-    data: () => ({
-      selectValue: "areaCliente",
-      sideOpen: false,
-    }),
-    methods: {
-      selectImg: function (event) {
-        this.selectValue = event.target.value;
-      },
+import BooksIcon from '../assets/icons/BooksIcon.vue'
+import HomeIcon from '../assets/icons/HomeIcon.vue'
+import EmailIcon from '../assets/icons/EmailIcon.vue'
+import TodoIcon from '../assets/icons/TodoIcon.vue'
+import Logo from '../assets/icons/Logo.vue'
+export default {
+  name: 'Sidebar',
+  components: { EmailIcon, TodoIcon, BooksIcon, HomeIcon, Logo },
+  data: () => ({
+    selectValue: 'areaCliente',
+    sideOpen: false,
+  }),
+  methods: {
+    selectImg(event) {
+      this.selectValue = event.target.value
     },
-  };
+  },
+}
 </script>
 
 <style lang="scss"></style>

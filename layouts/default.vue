@@ -4,7 +4,10 @@
 
     <main class="main-content">
       <TopBar />
-      <Nuxt />
+      <vue-page-transition name="fade">
+        <!-- <router-view/> -->
+        <Nuxt />
+      </vue-page-transition>
     </main>
   </div>
 </template>

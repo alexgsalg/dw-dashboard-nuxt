@@ -315,7 +315,7 @@ export default {
         title: 'Responsividade crossbrowser',
         by: 'Sergio Moura',
         price: '2500',
-        rating: '3.4',
+        rating: '5.0',
         content:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book.",
       },
@@ -326,7 +326,7 @@ export default {
         title: 'Gravação e masterização',
         by: 'Brasil Play',
         price: '2500',
-        rating: '3.4',
+        rating: '4.0',
         content:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a typespecimen book.",
       },

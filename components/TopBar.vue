@@ -19,11 +19,14 @@
     </nav>
     <div class="topBar_admin">
       <nav class="admin-icons">
-        <a href="#" class="admin-icons__item">
+        <a class="admin-icons__item">
           <img src="../assets/img/icon-bell.svg" alt="íconde de notificação" />
-        </a>
-        <a href="#" class="admin-icons__item">
-          <img src="../assets/img/icon-search.svg" alt="íconde de pesquisa" />
+          <ul class="notification_dropdown">
+            <li>
+              <p>Novo curso disponível</p>
+              <span>X</span>
+            </li>
+          </ul>
         </a>
       </nav>
       <div class="admin_user">
@@ -41,9 +44,9 @@
 
 <script>
 export default {
-  name: "ActionBar",
+  name: 'ActionBar',
   components: {},
-};
+}
 </script>
 
 <style lang="scss"></style>

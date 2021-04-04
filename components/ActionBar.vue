@@ -2,9 +2,9 @@
   <div class="actionBar">
     <h1 class="actionBar__title">{{ title }}</h1>
     <div class="actionBar__breadcrumbs">
-      <a href="#" class="breadcrumb_tohome">
+      <router-link to="/" class="breadcrumb_tohome">
         <home-icon />
-      </a>
+      </router-link>
       <img src="../assets/img/breadcrumbs-arrow.png" alt="breadcrumbs" />
       <p>Cursos</p>
     </div>
@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import ConfigNegIcon from "../assets/icons/ConfigNegIcon.vue";
-import HomeIcon from "../assets/icons/HomeIcon.vue";
+import ConfigNegIcon from '../assets/icons/ConfigNegIcon.vue'
+import HomeIcon from '../assets/icons/HomeIcon.vue'
 export default {
+  name: 'ActionBar',
   components: { HomeIcon, ConfigNegIcon },
-  name: "ActionBar",
-  props: ["title"],
-};
+  props: { title: { default: 'Dashboard DW', type: String } },
+}
 </script>
 
 <style></style>
