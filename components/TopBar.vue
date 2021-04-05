@@ -19,13 +19,18 @@
     </nav>
     <div class="topBar_admin">
       <nav class="admin-icons">
-        <a class="admin-icons__item">
+        <a
+          class="admin-icons__item"
+          @click="notificationBox = !notificationBox"
+        >
           <img src="../assets/img/icon-bell.svg" alt="íconde de notificação" />
-          <ul class="notification_dropdown">
+          <ul v-if="notificationBox == true" class="notification_dropdown">
             <li>
-              <p>Novo curso disponível</p>
-              <span>X</span>
+              <p>Novo curso de Programação responsiva disponível</p>
             </li>
+            <button class="notification_dropdown__btn">
+              Limpar notificações
+            </button>
           </ul>
         </a>
       </nav>
@@ -46,6 +51,9 @@
 export default {
   name: 'ActionBar',
   components: {},
+  data: () => ({
+    notificationBox: false,
+  }),
 }
 </script>
 
