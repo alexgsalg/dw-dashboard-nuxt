@@ -1,6 +1,6 @@
 # dw-dashboard-nuxt
 
-Dashboard criado em Vue.js para baseado em um teste de desenvolvimento. As informações da empresa foram omitidas e/ou alteradas por confidencialidade.
+Versão Nuxt.js do dashboard baseado em um teste de entrevista. Informações da empresa foram trocadas para preservar a privacidade e remover qualquer ligação com o processo.
 
 ## Build Setup
 
