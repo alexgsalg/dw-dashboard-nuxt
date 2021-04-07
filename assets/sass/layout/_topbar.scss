@@ -1,7 +1,7 @@
 .topBar {
   position: sticky;
   top: 0;
-  @include dflex(space-between, center);
+  @include dflex(flex-end, center);
   padding: 1rem 2rem 1rem 2.2rem;
   background-color: $white;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);

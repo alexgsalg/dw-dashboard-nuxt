@@ -111,7 +111,7 @@
     &__info {
       width: 100%;
       max-width: 100%;
-      flex-direction: row;
+      flex-direction: column;
       transition: all ease-in 150ms;
       & > div {
         @include dflex(space-between, center);

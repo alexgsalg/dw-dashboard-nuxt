@@ -1,6 +1,6 @@
 <template>
   <div class="topBar">
-    <nav class="topBar_icons">
+    <!-- <nav class="topBar_icons">
       <a href="#" class="topBar_icons__item">
         <img src="../assets/img/icon-todo.svg" alt="íconde de todo" />
       </a>
@@ -16,7 +16,7 @@
       <a href="#" class="topBar_icons__item star-icon">
         <img src="../assets/img/icon-star.svg" alt="íconde de star" />
       </a>
-    </nav>
+    </nav> -->
     <div class="topBar_admin">
       <nav class="admin-icons">
         <a
@@ -36,7 +36,7 @@
       </nav>
       <div class="admin_user">
         <div>
-          <p class="admin_user__name">Maria Elza</p>
+          <p class="admin_user__name">James Hustle</p>
           <p class="admin_user__group">Cliente VIP</p>
         </div>
         <div class="admin_user__avatar">
