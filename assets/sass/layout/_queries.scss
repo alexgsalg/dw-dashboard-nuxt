@@ -25,7 +25,12 @@
       left: 0;
     }
   }
-
+  .main_wrapper {
+    padding: 0;
+  }
+  .topBar {
+    position: relative;
+  }
   .section_mobile {
     position: fixed;
     top: 0;
