@@ -1,5 +1,7 @@
 # dw-dashboard-nuxt
 
+Dashboard criado em Vue.js para baseado em um teste de desenvolvimento. As informações da empresa foram omitidas e/ou alteradas por confidencialidade.
+
 ## Build Setup
 
 ```bash
