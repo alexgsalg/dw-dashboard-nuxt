@@ -165,37 +165,42 @@
         <div class="results_cards" :class="{ blinkIn: blinkIn }">
           <!-- CARD ITEM -->
           <div
-            v-for="item in cards"
-            :key="item.id"
+            v-for="curso in cursos"
+            :key="curso.id"
             class="card_item"
             :class="{ toCard: changeGrid }"
           >
-            <a :href="item.link" class="card_item__img"
-              ><img :src="item.image" alt="Imagem de card"
+            <a :href="curso.id" class="card_item__img"
+              ><img
+                :src="
+                  'http://localhost:1337' +
+                  curso.Imagem[0].formats.thumbnail.url
+                "
+                alt="Imagem de card"
             /></a>
 
             <div class="card_item__content">
               <h3 class="card_item__title">
-                <a href="#">{{ item.title }}</a>
+                <a href="#">{{ curso.Nome }}</a>
               </h3>
-              <p class="card_item__by"><span>Por</span> {{ item.by }}</p>
+              <p class="card_item__by"><span>Por</span> {{ curso.Autor }}</p>
               <p class="card_item__text">
-                {{ item.content.substring(0, 200) + '...' }}
+                {{ curso.Descricao.substring(0, 200) + '...' }}
               </p>
             </div>
             <div class="card_item__info">
               <div>
                 <span class="card_item__rating">
-                  {{ item.rating }}
+                  {{ curso.Avaliacao }}
                   <img src="../assets/img/star-outline.png" alt="rating" />
                 </span>
-                <p class="card_item__price">R${{ item.price }}</p>
+                <p class="card_item__price">R${{ curso.Preco }}</p>
               </div>
               <div>
                 <button type="button" class="btn btn_medium btn_light">
                   <i class="far fa-heart"></i>Amei
                 </button>
-                <a :href="item.link" class="btn btn_medium">
+                <a :href="curso.id" class="btn btn_medium">
                   <img
                     src="../assets/img/shopping-bag.svg"
                     alt="rating"
@@ -214,6 +219,7 @@
 
 <script>
 import bFormSlider from 'vue-bootstrap-slider/es/form-slider'
+import axios from 'axios'
 import GridCard from '../assets/icons/GridCard.vue'
 import ListCard from '../assets/icons/ListCard.vue'
 import FiveStarIcon from '../assets/icons/FiveStarIcon.vue'
@@ -235,6 +241,7 @@ export default {
     changeGrid: false,
     blinkIn: false,
     filterOpen: false,
+    cursos: [],
     radio: [
       { text: 'Todos', value: 'all' },
       { text: 'R$50', value: '50' },
@@ -332,8 +339,14 @@ export default {
       },
     ],
   }),
-  mounted() {
-    this.ifMobile()
+
+  async mounted() {
+    try {
+      const response = await axios.get('http://localhost:1337/cursos')
+      this.cursos = response.data
+    } catch (error) {
+      this.error = error
+    }
   },
   methods: {
     changeToCard(event) {

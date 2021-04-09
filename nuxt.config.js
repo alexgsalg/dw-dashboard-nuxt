@@ -44,13 +44,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/strapi',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: { baseURL: 'http://localhost:1337' },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [],
+  },
+
+  strapi: {
+    entities: ['cursos'],
+    url: 'http://localhost:1337',
   },
 }
